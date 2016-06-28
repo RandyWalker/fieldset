@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Fieldset Fun!</title>
+		<style>
+			form {
+				border: 2px solid;
+				width: 400px;
+				padding: 10px;
+				margin: 10px;
+				float: left;
+			}
+			#sadform {
+				border-color: red;
+			}
+			#sadform h1 {
+				color: red;
+			}
+			#happyform {
+				border-color: #0000cc;
+			}
+			#happyform h1 {
+				color: #0000cc;
+			}
+			div {
+				background-color: #ffeeee;
+			}
+			div div {
+				background-color: #ffcccc;
+			}
+			fieldset {
+				background-color: #eeeeff;
+			}
+			fieldset fieldset {
+				background-color: #ccccff;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<form id="sadform" action="#">
+			<h1>Sad Form</h1>
+			<div id="personalInfo">
+				<p><label for="name">Name: <input id="name" name="name"></label></p>
+				<p><label for="email">Email: <input id="email" name="email"></label></p>
+			</div>
+			<div id="messageDetails">
+				<p><label for="subject">Subject: <input id="subject" name="subject"></label></p>
+				<p><label for="message">Message: </label></p>
+				<p><textarea id="message" name="message"></textarea></p>
+				<div id="messageFormat">
+					<p><!-- Message Format: <br> -->
+					<label for="formatHtml">HTML <input id="formatHtml" name="messageType" type="radio" value="html"></label>
+					<label for="formatPlain">Plain <input id="formatPlain" name="messageType" type="radio" value="plain"></label></p>
+				</div>
+			</div>
+		</form>
+		<form id="happyform" action="#">
+			<h1>Happy Form!</h1>
+			<fieldset id="personalInfoHappy" form="happyform" disabled="disabled">
+				<legend>Personal Information</legend>
+				<p><label for="nameHappy">Name: <input id="nameHappy" name="nameHappy"></label></p>
+				<p><label for="emailHappy">Email: <input id="emailHappy" name="emailHappy"></label></p>
+			</fieldset>
+			<fieldset id="messageDetailsHappy">
+				<legend>Message Details</legend>
+				<p><label for="subjectHappy">Subject: <input id="subjectHappy" name="subjectHappy"></label></p>
+				<p><label for="messageHappy">Message: </label></p>
+				<p><textarea id="messageHappy" name="messageHappy"></textarea></p>
+				<fieldset id="messageFormatHappy">
+					<!-- <legend>Message Format</legend> -->
+						<label for="formatHtml">HTML <input id="formatHtml" name="messageType" type="radio" value="html"></label>
+						<label for="formatPlain">Plain <input id="formatPlain" name="messageType" type="radio" value="plain"></label>
+				</fieldset>
+			</fieldset>
+		</form>		
+	</body>
+</html>
